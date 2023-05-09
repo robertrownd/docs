@@ -26,7 +26,7 @@ const accountId = await window.rownd.near.ensureImplicitAccount();
 
 ```sh cURL
 # Invoke the 'near.ensure-implicit-account` with the user's Rownd access token
-curl 'https://api.rownd.io/hub/connection_action' \
+curl 'https://api.dev.rownd.teambespin.us/hub/connection_action' \
   -H 'authorization: Bearer <USERS_BEARER_TOKEN>' \
   -H 'content-type: application/json' \
   --data-raw '{"action_type":"near.ensure-implicit-account"}'
