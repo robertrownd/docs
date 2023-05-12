@@ -1,5 +1,5 @@
 {
-  "name": "Rownd",
+  "name": "BESPIN Airmen Data Platform (powered by Rownd)",
   "logo": {
     "light": "/logo/BESPIN_Logo_Full.png",
     "dark": "/logo/BESPIN_Logo_Full.png"
@@ -17,7 +17,7 @@
   },
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://app.rownd.io"
+    "url": "https://https://app.dev.rownd.teambespin.us"
   },
   "topbarLinks": [
     {
@@ -55,17 +55,6 @@
       "pages": [
         "configuration/overview",
         "configuration/applications",
-        {
-          "group": "Authentication methods",
-          "pages": [
-            "configuration/authentication-methods/overview",
-            "configuration/authentication-methods/email",
-            "configuration/authentication-methods/phone-sms",
-            "configuration/authentication-methods/apple",
-            "configuration/authentication-methods/google",
-            "configuration/authentication-methods/passkeys"
-          ]
-        },
         "configuration/mobile",
         "configuration/app-credentials",
         {
@@ -175,7 +164,7 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/RowndHQ",
+    "twitter": "https://twitter.com/BESPIN Airmen Data Platform (powered by Rownd)HQ",
     "linkedin": "https://www.linkedin.com/company/rownd/",
     "tiktok": "https://www.tiktok.com/@my.data.not.yours",
     "website": "https://rownd.io/"
