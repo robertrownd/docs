@@ -47,23 +47,19 @@
       "group": "Welcome",
       "pages": [
         "welcome/overview",
-        "welcome/getting-started"
+        "welcome/getting-started",
+        "welcome/sustainment-guide",
+        "welcome/SBIR-technical-summary"
       ]
     },
     {
       "group": "Configuration",
       "pages": [
         "configuration/overview",
+        "configuration/gov-cloud-config",
         "configuration/applications",
         "configuration/mobile",
         "configuration/app-credentials",
-        {
-          "group": "Web3",
-          "pages": [
-            "configuration/web3/near-overview",
-            "configuration/web3/near-examples"
-          ]
-        },
         {
           "group": "Customizations",
           "pages": [
@@ -76,15 +72,6 @@
           "group": "Integrations",
           "pages": [
             "configuration/integrations/overview",
-            "configuration/integrations/airtable",
-            {
-              "group": "Firebase (Realtime Database)",
-              "pages": [
-                "configuration/integrations/firebase---realtime-database",
-                "configuration/integrations/google-cloud-platform-requirements",
-                "configuration/integrations/examples--defining-user-data-locations"
-              ]
-            },
             "configuration/integrations/webhooks"
           ]
         }
@@ -164,9 +151,5 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/BESPIN Airmen Data Platform (powered by Rownd)HQ",
-    "linkedin": "https://www.linkedin.com/company/rownd/",
-    "tiktok": "https://www.tiktok.com/@my.data.not.yours",
-    "website": "https://rownd.io/"
   }
 }

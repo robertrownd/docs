@@ -1,0 +1,32 @@
+---
+title: "Gov Cloud Config"
+description: "Configuring Gov Cloud"
+---
+
+For this R&D Prototyping, the Rownd team moved its platfrom from the public AWS cloud to the private Gov Cloud. As a part of that effort, the team refactored its EKS environment to run on ECS.
+
+### How to update the docker images
+If the BESPIN team needs to update or restart pods, here is a step by step guide:
+
+1. Build and tag the docker image for the deployment using using the docker CLI. This installs dependencies and builds the project code.
+
+```shell
+docker build --platform=linux/amd64 . -t 174636780894.dkr.ecr.us-gov-west-amazonaws.com/rownd-dev:rownd-api-server-UNIQUE_TAG
+```
+
+2. Authenticate to the AWS Gov Cloud ECR instance using the AWS CLI
+
+```shell
+aws ecr get-login-password --region us-gov-west-1 --profile PROFILE | docker login --username AWS --password-stdin 174636780894.dkr.ecr.us-gov-west-1.amazonaws.com
+```
+
+3. Push the tagged docker image to the ECR instance using the AWS CLI
+
+```shell
+docker push 174636780894.dkr.ecr.us-gov-west-1.amazonaws.com/rownd-dev:rownd-api-server-UNIQUE_TAG
+```
+
+4. Use the AWS ECS Dashboard to create a new task revision for the deployment that uses the latest image pushed to ECR.
+5. Use the AWS ECS Dashboard to update the ECS deployment to use the new task revision.
+6. Monitor the rollout of new ECS deployment replicas.
+
