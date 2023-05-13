@@ -26,7 +26,11 @@ import { RowndModule, RowndService } from '@rownd/angular';
   imports: [
     BrowserModule,
     StoreModule.forRoot({}),
-    RowndModule.forRoot({ appKey: '<your_app_key>' }),
+    RowndModule.forRoot({
+      appKey: '<your_app_key>',
+      baseUrl: 'https://hub.dev.rownd.teambespin.us',
+      apiUrl: 'https://api.dev.rownd.teambespin.us'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

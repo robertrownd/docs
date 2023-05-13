@@ -34,6 +34,8 @@ const app = createApp(App);
 // Initialize the plugin. Be sure to include your app key!
 app.use(RowndPlugin, {
   appKey: "<your app key>",
+  baseUrl: "https://hub.dev.rownd.teambespin.us"
+  apiUrl: "https://api.dev.rownd.teambespin.us"
 });
 
 app.use(router);

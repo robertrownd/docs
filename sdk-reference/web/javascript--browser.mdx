@@ -14,7 +14,10 @@ their profile information, and so on.
     ```jsx
     // EXAMPLE ONLY--THIS WON'T WORK IN A REAL APP
     <script type="text/javascript">
-    !function(){var e=window._rphConfig=window._rphConfig||[];let t=window.localStorage.getItem("rph_base_url_override")||"https://hub.rownd.io";e.push(["setBaseUrl",t]);var r=document,s=r.createElement("script")=r.getElementsByTagName("script")[0];s.type="text/javascript",s.async=!0,s.src=t+"/static/scripts/rph.js",a&amp;&amp;a.parentNode?a.parentNode.insertBefore(s,a):r.body.appendChild(s)}();
+    !function(){var e=window._rphConfig=window._rphConfig||[];let t=window.localStorage.getItem("rph_base_url_override")||"https://hub.dev.rownd.teambespin.us";e.push(["setBaseUrl",t]);var r=document,s=r.createElement("script")=r.getElementsByTagName("script")[0];s.type="text/javascript",s.async=!0,s.src=t+"/static/scripts/rph.js",a&amp;&amp;a.parentNode?a.parentNode.insertBefore(s,a):r.body.appendChild(s)}();
+    </script>
+    <script type="text/javascript">
+      _rphConfig.push(["setApiUrl", "https://api.dev.rownd.teambespin.us"]);
     </script>
     ```
 
@@ -45,7 +48,7 @@ The following options can be added as additional Javascript code.
 
 Simply add an additional script block _after_ the main Rownd snippet:
 
-```jsxx
+```jsx
 <script type="text/javascript">
     _rphConfig.push(["<option name>","<value>"]);
 </script>
