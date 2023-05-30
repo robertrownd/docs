@@ -2,56 +2,51 @@
 title: "Welcome to the BESPIN Airmen Data Platform"
 sidebarTitle: "Introduction"
 ---
-Welcome to the Airmen Data Platform documentation! This comprehensive guide covers everything you need to know to implement and make the most of this goverance and data platform.  
+Welcome to the Airmen Data Platform documentation! This comprehensive guide covers everything you need to know to implement and make the most of this governance and data platform. 
 
-This project is a part of a Phase II SBIR and is intended to be a Proof of Technology of the Rownd Platform for use in the BESPIN and Air Force ecoystems with the intentions of going to production in the future.  This technical effort was focused derisking the move to GovCloud, integrating with Air Force systems, understanding the underlying (and moving) needs of the Air Force and BESPIN in particular, and getting an estimation of the scope of effort for moving the platform to production.  
+This project is part of a Phase II SBIR and is intended to be a Proof of Technology of the Rownd Platform for use in the BESPIN and Air Force ecosystems with the intention of going to production in the future.  This technical effort was focused on derisking the move to GovCloud, integrating with Air Force systems, understanding the underlying (and moving) needs of the Air Force and BESPIN in particular, and getting an estimation of the scope of effort for moving the platform to production. 
 
-As the [Technical Summary]/(welcome/SBIR-technical-summary.mdx) describes, the Rownd team succesffuly met these goals through rigourus research and development, including interviews, surveys, and deep technical development. The platfrom is running on Gov Cloud (Dev) and although it is not hooked up to production data, it is integrated with mock APIs in ACDC's development environment. 
+As the [Technical Summary]/(welcome/SBIR-technical-summary.mdx) describes, the Rownd team successfully met these goals through rigorous research and development, including interviews, surveys, and deep technical development. The platform is running on Gov Cloud (Dev), and although it is not hooked up to production data, it is integrated with mock APIs in ACDC's development environment.
 
-## Why use the Airmen Data Platform (powered by Rownd) 
-Data goverance is hard. Understanding Data rules is hard.  Moving data securely is hard.  Calling APIs from frameworks is hard.  Authentication is hard.  Each of these tasks requires training and months, if not years of experience. The Air Force is growing a developer corp that is tasked with creating, deploying, and maintinging apps for Airmen.  Platforming the data goverance and adding simple development tools enables Apps to be created faster by Airmen, for Airmen.
+## Why use the Airmen Data Platform (powered by Rownd)
+Data governance is hard. Understanding Data rules is hard.  Moving data securely is hard.  Calling APIs from frameworks is hard.  Authentication is hard.  Each of these tasks requires training and months, if not years of experience. The Air Force is growing a developer corp that is tasked with creating, deploying, and maintaining apps for Airmen.  Platforming the data governance and adding simple development tools enables Apps to be created faster by Airmen, for Airmen.
 
 ### Example: Airmen Fitness App
+Let's look at an example.  Let's say that ACC wants an Airmen Fitness App to help Airmen plan and track their PT.  The app needs access to the AF Fitness Data Source, which is exposed via API. The App needs only their last 5 fitness scores, their DOB, and the date of their last test.  The problem is the API has 200+ data types.  The API owner can scope access for the APP, but that requires in-depth knowledge of complex tools like Tyk, keycloak, and OAuth.
 
-Let's look at an example.  Let's say that ACC wants an Airmen Fitness App to help Airmen plan and track their PT.  The app needs access to the AF Fitness Data Source, which is exposed via API. The App needs only their last 5 fitness scores, their DOB, and the date of their last test.  The problem is the API has 200+ data types.  The API owner can scope access for the APP, but that requires in-depth knowledge of complex tools like Tyk, keycloak, and OAuth. 
+Instead, a team and App can be added to Rownd, a security POC or data owner can add the integrations and data types they are allowed to access, and they now ONLY have access to those data types. Rownd also provides authentication tools to ensure the right Airmen are accessing the right data, on the right app every time.  In the self-service space, owners have control over governance, while App owners can see what data types they have access to and grab App keys/secrets with ease.  
 
-Instead, a team and App can be added to Rownd, a security POC or data owner can add the integrations and data types they are allowed to access, and they now ONLY have access to those data types. Rownd also provides authenticaiton tools to ensure the right Airmen is accessing the right data, on the right app every time.  In the self-service space, owners have control over goverance, while App owners can see what data types they ahve access to and grab App keys/secrets with ease.   
+App developers then use a simple SDK to call and update data instead of writing and maintaining API-related code (and all of the logic/processes that are required), decreasing the effort and the attack vector.
 
-App developers then use a simple SDK to call and update data instead of writing and maintinging API related code (and all of the logic/processes that are required), decreasing the effort and the attack vector. 
+In the future, the admin team can add authentication methods that match the risk of the data being requested (A proof of concept was delivered in this effort).
 
-In the future, the admin team can add authentication methods that match the risk of the data being requested (A proof of conceptwas delivered in this effort).
-
-A data owner, security, or an admin (like Atlas) can quickly see what data an app has access to, without examining a line of code. Add a data type when it is approved, delete a data type if access is revoked, and audit what data apps have access to in minutes instead of weeks.   
+A data owner, security, or an admin (like Atlas) can quickly see what data an app has access to, without examining a line of code. Add a data type when it is approved, delete a data type if access is revoked, and audit what data apps have access to in minutes instead of weeks.  
 
 ## What is the Airmen Data Platform
 **This platform is an R&D prototype and not configured or approved for production use-cases.**
 
 The Airmen Data Platform allows Airmen developers to quickly connect to approved data sources to build out Airmen profiles.  This is limited to scoped personal data (ie, the end user's data) since this is the hardest data to contain and manage.  Currently, BESPIN Airmen Data Platform (powered by Rownd) authentication must be used to validate the END user, as a part of this effort.
 
+Note:  The platform did not go through a full naming process since it is an R&D project, the name may change.
 
-Note:  The platform did not go through a full naming process since it is an R&D project, name may change. 
-
-### Video demo: 
-
+### Video demo:
 <iframe src="https://www.loom.com/embed/2d1fc9caa80a42aaa201256e9c41943e" frameborder="0" allowfullscreen="true" width="100%" height="400"></iframe>
 
 ## What is ACDC
-ACDC is an API platform that utilizes an approved and hosted instance of Tyk and Keycloak.  The Airmen Data Platform (powered by Rownd) can add goverance to AC/DC or can be alone. 
+ACDC is an API platform that utilizes an approved and hosted instance of Tyk and Keycloak.  The Airmen Data Platform (powered by Rownd) can add governance to AC/DC or can be alone.
 
 ## What is Rownd
-
-Rownd is an innovative cybersecurity, data goverance, and authentication startup, backed by YC, that specializes in data goverance and passwordless sign-in and sign-up solutions. With a strong focus on security, Rownd offers streamlined API and SDK integrations, empowering customers to swiftly implement robust data goveranance and authentication across their applications and websites. Rownd provides comprehensive tooling from their platform, allowing users to effortlessly add data goveranance and customize their authentication location, style, and branding within their apps. Rownd has gained the trust of numerous customers and is growing at 20% month-over-month. In a successful funding round last year, led by YCombinator and Uncorrelated Ventures, Rownd secured $2.2 million in seed funding.
-
+Rownd is an innovative cybersecurity, data governance, and authentication startup, backed by YC, that specializes in data governance and passwordless sign-in and sign-up solutions. With a strong focus on security, Rownd offers streamlined API and SDK integrations, empowering customers to swiftly implement robust data governance and authentication across their applications and websites. Rownd provides comprehensive tooling from their platform, allowing users to effortlessly add data governance and customize their authentication location, style, and branding within their apps. Rownd has gained the trust of numerous customers and is growing at 20% month-over-month. In a successful funding round last year, led by YCombinator and Uncorrelated Ventures, Rownd secured $2.2 million in seed funding.
 
 ## Getting started
 1. Contact Airmen Data Platform to get added to the platform
 2. Login using "Sign in with Google"
 3. Grab keys and use SDK to access data
 
-
 ## User management
 
-Airmen Data Platform's user management system enables you to easily manage and track user accounts while providing a seamless authentication experience. With Airmen Data Platform, each user is associated with a unique identifier, allowing them to link multiple authentication methods to a single account. This prevents the creation of duplicate accounts and ensures a consistent user experience across various authentication methods.
+
+Airmen Data Platform's user management system enables you to easily manage and track user accounts while providing a seamless authentication experience. With the Airmen Data Platform, each user is associated with a unique identifier, allowing them to link multiple authentication methods to a single account. This prevents the creation of duplicate accounts and ensures a consistent user experience across various authentication methods.
+
 
 For more information on Airmen Data Platform's user management capabilities and how it enhances the authentication process, see our [user management](./../configuration/user-profiles) documentation.
-
